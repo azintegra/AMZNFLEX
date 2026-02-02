@@ -9,7 +9,7 @@
         "gate": "5689",
         "alternate": "",
         "locker": "",
-        "apartment": "3538 Romero",
+        "apartment": "",
         "business": "Absolute Windows",
         "type": "business",
         "city": "Tucson"
@@ -26,9 +26,9 @@
         "gate": "6417",
         "alternate": "",
         "locker": "",
-        "apartment": "",
+        "apartment": "Agave Apartments",
         "business": "",
-        "type": "residential",
+        "type": "apartment",
         "city": "Tucson"
       }
     ]
@@ -77,9 +77,9 @@
         "gate": "4621",
         "alternate": "",
         "locker": "",
-        "apartment": "",
+        "apartment": "Bear Canyon Apartments",
         "business": "",
-        "type": "residential",
+        "type": "apartment",
         "city": "Tucson"
       }
     ]
@@ -814,7 +814,7 @@
         "locker": "",
         "apartment": "",
         "business": "",
-        "type": "apartment",
+        "type": "residential",
         "city": "Tucson"
       },
       {
@@ -824,7 +824,7 @@
         "locker": "",
         "apartment": "",
         "business": "",
-        "type": "apartment",
+        "type": "residential",
         "city": "Tucson"
       },
       {
@@ -834,7 +834,7 @@
         "locker": "",
         "apartment": "",
         "business": "",
-        "type": "apartment",
+        "type": "residential",
         "city": "Tucson"
       },
       {
@@ -844,7 +844,7 @@
         "locker": "",
         "apartment": "",
         "business": "",
-        "type": "apartment",
+        "type": "residential",
         "city": "Tucson"
       }
     ]
@@ -1671,9 +1671,9 @@
         "gate": "5892#",
         "alternate": "",
         "locker": "",
-        "apartment": "",
+        "apartment": "Navajo Apartment",
         "business": "",
-        "type": "residential",
+        "type": "apartment",
         "city": "Tucson"
       }
     ]
@@ -1688,7 +1688,7 @@
         "gate": "8479",
         "alternate": "",
         "locker": "",
-        "apartment": "",
+        "apartment": "Oro Valley / Northwest",
         "business": "",
         "type": "apartment",
         "city": "Tucson"
@@ -1705,9 +1705,9 @@
         "gate": "1074",
         "alternate": "",
         "locker": "",
-        "apartment": "",
+        "apartment": "Park Place Apartments",
         "business": "",
-        "type": "residential",
+        "type": "apartment",
         "city": "Tucson"
       }
     ]
@@ -1722,9 +1722,9 @@
         "gate": "6160",
         "alternate": "",
         "locker": "",
-        "apartment": "",
+        "apartment": "Pima Canyon Apartments",
         "business": "",
-        "type": "residential",
+        "type": "apartment",
         "city": "Tucson"
       }
     ]
@@ -1972,7 +1972,7 @@
         "locker": "",
         "apartment": "",
         "business": "",
-        "type": "apartment",
+        "type": "residential",
         "city": "Tucson"
       },
       {
@@ -2237,9 +2237,9 @@
         "gate": "3980",
         "alternate": "",
         "locker": "",
-        "apartment": "",
+        "apartment": "Ridgeline Apartments",
         "business": "",
-        "type": "residential",
+        "type": "apartment",
         "city": "Tucson"
       }
     ]
@@ -2349,9 +2349,9 @@
         "gate": "3515",
         "alternate": "",
         "locker": "",
-        "apartment": "",
+        "apartment": "Sabino Vista Apartments",
         "business": "",
-        "type": "residential",
+        "type": "apartment",
         "city": "Tucson"
       }
     ]
@@ -2366,9 +2366,9 @@
         "gate": "a",
         "alternate": "",
         "locker": "",
-        "apartment": "",
+        "apartment": "Sahara Apartments",
         "business": "",
-        "type": "residential",
+        "type": "apartment",
         "city": "Tucson"
       }
     ]
@@ -2839,9 +2839,9 @@
         "gate": "8762",
         "alternate": "",
         "locker": "",
-        "apartment": "",
+        "apartment": "Zona Rio Apartments",
         "business": "",
-        "type": "residential",
+        "type": "apartment",
         "city": "Tucson"
       }
     ]
