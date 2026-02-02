@@ -12,7 +12,6 @@
         "apartment": "3538 Romero",
         "business": "Absolute Windows",
         "type": "business",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       }
     ]
@@ -30,7 +29,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Casas Adobes / Northwest Tucson",
         "city": "Tucson"
       }
     ]
@@ -48,7 +46,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       }
     ]
@@ -66,7 +63,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "East Tucson",
         "city": "Tucson"
       }
     ]
@@ -84,7 +80,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Catalina Foothills",
         "city": "Tucson"
       }
     ]
@@ -102,7 +97,6 @@
         "apartment": "Campus Crossings at Star Pass",
         "business": "",
         "type": "apartment",
-        "neighborhood": "West Tucson",
         "city": "Tucson"
       }
     ]
@@ -120,7 +114,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Casas Adobes / Northwest Tucson",
         "city": "Tucson"
       },
       {
@@ -131,7 +124,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Casas Adobes / Northwest Tucson",
         "city": "Tucson"
       },
       {
@@ -142,7 +134,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Casas Adobes / Northwest Tucson",
         "city": "Tucson"
       },
       {
@@ -153,7 +144,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Casas Adobes / Northwest Tucson",
         "city": "Tucson"
       },
       {
@@ -164,7 +154,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Casas Adobes / Northwest Tucson",
         "city": "Tucson"
       },
       {
@@ -175,7 +164,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Casas Adobes / Northwest Tucson",
         "city": "Tucson"
       }
     ]
@@ -193,7 +181,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Catalina Foothills",
         "city": "Tucson"
       },
       {
@@ -204,7 +191,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Catalina Foothills",
         "city": "Tucson"
       },
       {
@@ -215,7 +201,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Catalina Foothills",
         "city": "Tucson"
       },
       {
@@ -226,7 +211,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Catalina Foothills",
         "city": "Tucson"
       },
       {
@@ -237,7 +221,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Catalina Foothills",
         "city": "Tucson"
       },
       {
@@ -248,7 +231,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Catalina Foothills",
         "city": "Tucson"
       },
       {
@@ -259,7 +241,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Catalina Foothills",
         "city": "Tucson"
       },
       {
@@ -270,7 +251,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Catalina Foothills",
         "city": "Tucson"
       },
       {
@@ -281,7 +261,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "East Tucson",
         "city": "Tucson"
       },
       {
@@ -292,7 +271,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Catalina Foothills",
         "city": "Tucson"
       },
       {
@@ -303,7 +281,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Catalina Foothills",
         "city": "Tucson"
       },
       {
@@ -314,7 +291,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Catalina Foothills",
         "city": "Tucson"
       },
       {
@@ -325,7 +301,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Catalina Foothills",
         "city": "Tucson"
       }
     ]
@@ -343,7 +318,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -354,7 +328,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -365,7 +338,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -376,7 +348,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -387,7 +358,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -398,7 +368,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -409,7 +378,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -420,7 +388,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -431,7 +398,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -442,7 +408,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -453,7 +418,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -464,7 +428,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -475,7 +438,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -486,7 +448,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -497,7 +458,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -508,7 +468,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -519,7 +478,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -530,7 +488,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -541,7 +498,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -552,7 +508,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -563,7 +518,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -574,7 +528,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -585,7 +538,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -596,7 +548,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -607,7 +558,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -618,7 +568,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -629,7 +578,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -640,7 +588,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -651,7 +598,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -662,7 +608,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -673,7 +618,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -684,7 +628,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -695,7 +638,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -706,7 +648,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -717,7 +658,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -728,7 +668,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -739,7 +678,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -750,7 +688,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -761,7 +698,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -772,7 +708,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -783,7 +718,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -794,7 +728,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -805,7 +738,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -816,7 +748,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -827,7 +758,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -838,7 +768,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -849,7 +778,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -860,7 +788,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       },
       {
@@ -871,7 +798,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       }
     ]
@@ -889,7 +815,6 @@
         "apartment": "",
         "business": "",
         "type": "apartment",
-        "neighborhood": "Central Tucson Additions",
         "city": "Tucson"
       },
       {
@@ -900,7 +825,6 @@
         "apartment": "",
         "business": "",
         "type": "apartment",
-        "neighborhood": "Central Tucson Additions",
         "city": "Tucson"
       },
       {
@@ -911,7 +835,6 @@
         "apartment": "",
         "business": "",
         "type": "apartment",
-        "neighborhood": "Central Tucson Additions",
         "city": "Tucson"
       },
       {
@@ -922,7 +845,6 @@
         "apartment": "",
         "business": "",
         "type": "apartment",
-        "neighborhood": "Central Tucson Additions",
         "city": "Tucson"
       }
     ]
@@ -940,7 +862,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -951,7 +872,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Casas Adobes / Northwest Tucson",
         "city": "Tucson"
       },
       {
@@ -962,7 +882,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -973,7 +892,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -984,7 +902,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -995,7 +912,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1006,7 +922,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1017,7 +932,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1028,7 +942,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1039,7 +952,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1050,7 +962,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1061,7 +972,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       }
     ]
@@ -1079,7 +989,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       }
     ]
@@ -1097,7 +1006,6 @@
         "apartment": "Cortland on the Loop",
         "business": "",
         "type": "apartment",
-        "neighborhood": "Casas Adobes / Northwest Tucson",
         "city": "Tucson"
       }
     ]
@@ -1115,7 +1023,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       }
     ]
@@ -1133,7 +1040,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Tanque Verde / Foothills East",
         "city": "Tucson"
       }
     ]
@@ -1151,7 +1057,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       }
     ]
@@ -1169,7 +1074,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1180,7 +1084,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1191,7 +1094,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1202,7 +1104,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Casas Adobes / Northwest Tucson",
         "city": "Tucson"
       },
       {
@@ -1213,7 +1114,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1224,7 +1124,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1235,7 +1134,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1246,7 +1144,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1257,7 +1154,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1268,7 +1164,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1279,7 +1174,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1290,7 +1184,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1301,7 +1194,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1312,7 +1204,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Casas Adobes / Northwest Tucson",
         "city": "Tucson"
       },
       {
@@ -1323,7 +1214,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "West Tucson",
         "city": "Tucson"
       },
       {
@@ -1334,7 +1224,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1345,7 +1234,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1356,7 +1244,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Casas Adobes / Northwest Tucson",
         "city": "Tucson"
       },
       {
@@ -1367,7 +1254,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1378,7 +1264,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1389,7 +1274,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1400,7 +1284,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -1411,7 +1294,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       }
     ]
@@ -1429,7 +1311,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "East Tucson",
         "city": "Tucson"
       },
       {
@@ -1440,7 +1321,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "East Tucson",
         "city": "Tucson"
       },
       {
@@ -1451,7 +1331,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "East Tucson",
         "city": "Tucson"
       },
       {
@@ -1462,7 +1341,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "East Tucson",
         "city": "Tucson"
       },
       {
@@ -1473,7 +1351,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "East Tucson",
         "city": "Tucson"
       }
     ]
@@ -1491,7 +1368,6 @@
         "apartment": "",
         "business": "",
         "type": "misc",
-        "neighborhood": "Tucson",
         "city": "Tucson"
       }
     ]
@@ -1509,7 +1385,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       }
     ]
@@ -1527,7 +1402,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       }
     ]
@@ -1545,7 +1419,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Foothills / Sabino",
         "city": "Tucson"
       }
     ]
@@ -1563,7 +1436,6 @@
         "apartment": "",
         "business": "Frito Lay N. I-10 Frontage",
         "type": "business",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       }
     ]
@@ -1581,7 +1453,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       }
     ]
@@ -1599,7 +1470,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "East Tucson",
         "city": "Tucson"
       }
     ]
@@ -1617,7 +1487,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       }
     ]
@@ -1635,13 +1504,12 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       }
     ]
   },
   {
-    "community": "Lakes at Castle rock",
+    "community": "Lakes at Castle Rock",
     "description": "",
     "region": "Tucson",
     "addresses": [
@@ -1653,13 +1521,12 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "East Tucson",
         "city": "Tucson"
       }
     ]
   },
   {
-    "community": "Lakes at castle rock",
+    "community": "Lakes at Castle Rock",
     "description": "",
     "region": "Tucson",
     "addresses": [
@@ -1671,7 +1538,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Lakeside Park Area",
         "city": "Tucson"
       }
     ]
@@ -1689,7 +1555,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       }
     ]
@@ -1707,7 +1572,6 @@
         "apartment": "Luna Azul",
         "business": "",
         "type": "apartment",
-        "neighborhood": "Marana",
         "city": "Marana"
       }
     ]
@@ -1725,7 +1589,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       }
     ]
@@ -1743,7 +1606,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       }
     ]
@@ -1761,7 +1623,6 @@
         "apartment": "Mira Vista Resort",
         "business": "",
         "type": "apartment",
-        "neighborhood": "Marana",
         "city": "Marana"
       }
     ]
@@ -1779,7 +1640,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       }
     ]
@@ -1797,7 +1657,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       }
     ]
@@ -1815,7 +1674,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       }
     ]
@@ -1833,7 +1691,6 @@
         "apartment": "",
         "business": "",
         "type": "apartment",
-        "neighborhood": "Oro Valley / Northwest",
         "city": "Tucson"
       }
     ]
@@ -1851,7 +1708,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "East Tucson",
         "city": "Tucson"
       }
     ]
@@ -1869,7 +1725,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Casas Adobes / Northwest Tucson",
         "city": "Tucson"
       }
     ]
@@ -1887,7 +1742,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Tucson",
         "city": "Tucson"
       }
     ]
@@ -1905,7 +1759,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "West Tucson",
         "city": "Tucson"
       }
     ]
@@ -1923,7 +1776,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Sahuarita",
         "city": "Sahuarita"
       },
       {
@@ -1934,7 +1786,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Sahuarita",
         "city": "Sahuarita"
       },
       {
@@ -1945,7 +1796,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Sahuarita",
         "city": "Sahuarita"
       },
       {
@@ -1956,7 +1806,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Sahuarita",
         "city": "Sahuarita"
       },
       {
@@ -1967,7 +1816,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Sahuarita",
         "city": "Sahuarita"
       },
       {
@@ -1978,7 +1826,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Sahuarita",
         "city": "Sahuarita"
       },
       {
@@ -1989,7 +1836,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Sahuarita",
         "city": "Sahuarita"
       },
       {
@@ -2000,7 +1846,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Sahuarita",
         "city": "Sahuarita"
       },
       {
@@ -2011,7 +1856,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Sahuarita",
         "city": "Sahuarita"
       },
       {
@@ -2022,7 +1866,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Sahuarita",
         "city": "Sahuarita"
       }
     ]
@@ -2040,7 +1883,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Tucson",
         "city": "Tucson"
       },
       {
@@ -2051,7 +1893,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2062,7 +1903,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Tucson",
         "city": "Tucson"
       },
       {
@@ -2073,7 +1913,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2084,7 +1923,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2095,7 +1933,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2106,7 +1943,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2117,7 +1953,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Tucson",
         "city": "Tucson"
       },
       {
@@ -2128,7 +1963,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2139,7 +1973,6 @@
         "apartment": "",
         "business": "",
         "type": "apartment",
-        "neighborhood": "Oro Valley / Northwest",
         "city": "Tucson"
       },
       {
@@ -2150,7 +1983,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2161,7 +1993,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2172,7 +2003,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2183,7 +2013,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2194,7 +2023,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2205,7 +2033,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2216,7 +2043,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2227,7 +2053,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2238,7 +2063,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2249,7 +2073,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2260,7 +2083,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2271,7 +2093,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2282,7 +2103,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2293,7 +2113,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2304,7 +2123,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2315,7 +2133,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2326,7 +2143,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2337,7 +2153,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2348,7 +2163,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2359,7 +2173,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2370,7 +2183,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2381,7 +2193,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2392,7 +2203,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2403,7 +2213,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       },
       {
@@ -2414,7 +2223,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       }
     ]
@@ -2432,7 +2240,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Casas Adobes / Northwest Tucson",
         "city": "Tucson"
       }
     ]
@@ -2450,7 +2257,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       }
     ]
@@ -2468,7 +2274,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Rincon Valley / Saguaro East",
         "city": "Tucson"
       }
     ]
@@ -2486,7 +2291,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Tucson",
         "city": "Tucson"
       },
       {
@@ -2497,7 +2301,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Tucson",
         "city": "Tucson"
       }
     ]
@@ -2515,7 +2318,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       }
     ]
@@ -2533,7 +2335,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "East Tucson",
         "city": "Tucson"
       }
     ]
@@ -2551,7 +2352,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Catalina Foothills",
         "city": "Tucson"
       }
     ]
@@ -2569,7 +2369,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       }
     ]
@@ -2587,7 +2386,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Sahuarita",
         "city": "Sahuarita"
       },
       {
@@ -2598,7 +2396,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Sahuarita",
         "city": "Sahuarita"
       }
     ]
@@ -2616,7 +2413,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "West Tucson",
         "city": "Tucson"
       }
     ]
@@ -2634,7 +2430,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       },
       {
@@ -2645,7 +2440,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       }
     ]
@@ -2663,7 +2457,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "South Tucson",
         "city": "Tucson"
       },
       {
@@ -2674,7 +2467,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "South Tucson",
         "city": "Tucson"
       },
       {
@@ -2685,7 +2477,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "South Tucson",
         "city": "Tucson"
       }
     ]
@@ -2703,7 +2494,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "South Tucson / Southwest",
         "city": "Tucson"
       }
     ]
@@ -2721,7 +2511,6 @@
         "apartment": "",
         "business": "Stardance Event Center",
         "type": "business",
-        "neighborhood": "Casas Adobes / Northwest Tucson",
         "city": "Tucson"
       }
     ]
@@ -2739,7 +2528,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       }
     ]
@@ -2757,7 +2545,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       }
     ]
@@ -2775,7 +2562,6 @@
         "apartment": "Sunset Dunes",
         "business": "",
         "type": "apartment",
-        "neighborhood": "Marana",
         "city": "Marana"
       }
     ]
@@ -2793,7 +2579,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "West Tucson",
         "city": "Tucson"
       },
       {
@@ -2804,7 +2589,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Casas Adobes / Northwest Tucson",
         "city": "Tucson"
       }
     ]
@@ -2822,7 +2606,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Tanque Verde / Foothills East",
         "city": "Tucson"
       },
       {
@@ -2833,7 +2616,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Tanque Verde / Foothills East",
         "city": "Tucson"
       },
       {
@@ -2844,7 +2626,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Tanque Verde / Foothills East",
         "city": "Tucson"
       },
       {
@@ -2855,7 +2636,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Tanque Verde / Foothills East",
         "city": "Tucson"
       }
     ]
@@ -2873,7 +2653,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       }
     ]
@@ -2891,7 +2670,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Oro Valley",
         "city": "Oro Valley"
       }
     ]
@@ -2909,7 +2687,6 @@
         "apartment": "The Pines",
         "business": "",
         "type": "apartment",
-        "neighborhood": "Marana",
         "city": "Marana"
       }
     ]
@@ -2927,7 +2704,6 @@
         "apartment": "Union on 6th",
         "business": "",
         "type": "apartment",
-        "neighborhood": "Central Tucson",
         "city": "Tucson"
       }
     ]
@@ -2945,7 +2721,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Vail",
         "city": "Vail"
       },
       {
@@ -2956,7 +2731,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Vail",
         "city": "Vail"
       },
       {
@@ -2967,7 +2741,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Vail",
         "city": "Vail"
       },
       {
@@ -2978,7 +2751,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Vail",
         "city": "Vail"
       },
       {
@@ -2989,7 +2761,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Vail",
         "city": "Vail"
       },
       {
@@ -3000,7 +2771,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Vail",
         "city": "Vail"
       },
       {
@@ -3011,7 +2781,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Vail",
         "city": "Vail"
       }
     ]
@@ -3029,7 +2798,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Tucson",
         "city": "Tucson"
       },
       {
@@ -3040,7 +2808,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Marana",
         "city": "Marana"
       }
     ]
@@ -3058,7 +2825,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "West Tucson",
         "city": "Tucson"
       }
     ]
@@ -3076,7 +2842,6 @@
         "apartment": "",
         "business": "",
         "type": "residential",
-        "neighborhood": "Casas Adobes / Northwest Tucson",
         "city": "Tucson"
       }
     ]
