@@ -1,301 +1,421 @@
-// Amazon Flex — Gate & Locker Codes
-// Displays entries grouped by HOA (group.community) and filtered by tabs + search.
-// Adds a Google Maps "Street View" link for every entry (opens Maps search; Street View is available when Google has pano coverage).
+async function loadData() {
+  try {
+    const res = await fetch('./data.json', { cache: 'no-store' });
 
-const DATA_FILE = "data.json"; // <-- change if your JSON filename differs
-const DEFAULT_TAB = "apartments";
-
-const $ = (sel) => document.querySelector(sel);
-
-const els = {
-  search: $("#search"),
-  list: $("#list"),
-  summary: $("#summary"),
-  toast: $("#toast"),
-  tabs: Array.from(document.querySelectorAll(".tab")),
-};
-
-let rawGroups = [];
-let activeTab = DEFAULT_TAB;
-
-// ---------- helpers ----------
-function normalize(str) {
-  return (str ?? "").toString().trim().toLowerCase();
-}
-
-function safeText(str) {
-  return (str ?? "").toString();
-}
-
-function toast(msg) {
-  if (!els.toast) return;
-  els.toast.textContent = msg;
-  els.toast.classList.add("show");
-  clearTimeout(toast._t);
-  toast._t = setTimeout(() => els.toast.classList.remove("show"), 1600);
-}
-
-function buildMapsQuery(entry, group) {
-  const parts = [];
-  const addr = safeText(entry.address);
-  if (addr) parts.push(addr);
-
-  const apt = safeText(entry.apartment);
-  if (apt && !parts.join(' ').toLowerCase().includes(apt.toLowerCase())) parts.push(apt);
-
-  const city = safeText(entry.city) || safeText(group.region) || 'Tucson';
-  if (city) parts.push(city);
-
-  const joined = parts.join(', ');
-  return joined.toLowerCase().includes('az') ? joined : `${joined}, AZ`;
-}
-
-function getLatLng(entry) {
-  const lat = parseFloat(entry.lat ?? entry.latitude ?? entry.y ?? '');
-  const lng = parseFloat(entry.lng ?? entry.lon ?? entry.longitude ?? entry.x ?? '');
-  if (Number.isFinite(lat) && Number.isFinite(lng)) return { lat, lng };
-  return null;
-}
-
-function streetViewUrl(entry, group) {
-  const ll = getLatLng(entry);
-  if (ll) {
-    return `https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=${ll.lat},${ll.lng}`;
+    if (!res.ok) {
+      throw new Error(`Failed to load data.json – ${res.status} ${res.statusText}`);
+    }
+    return await res.json();
+  } catch (err) {
+    const summary = document.getElementById('summary');
+    if (summary) summary.textContent = 'Failed to load data. Please try again later.';
+    console.error('Data load error:', err);
+    throw err;
   }
-  const query = buildMapsQuery(entry, group);
-  return `https://www.google.com/maps?q=${encodeURIComponent(query)}&layer=c`;
 }
 
-
-function entryMatchesTab(entry, tab) {
-  const t = normalize(entry.type);
-  if (tab === "all") return true;
-
-  if (tab === "apartments") return t === "apartment";
-  if (tab === "residential") return t === "residential";
-  if (tab === "businesses") return t === "business";
-
-  return true;
+function debounce(fn, delay = 250) {
+  let timer;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn(...args), delay);
+  };
 }
 
-function entryMatchesSearch(entry, group, q) {
-  if (!q) return true;
-  const hay = [
-    group.community,              // HOA name
-    group.region,
-    entry.address,
-    entry.gate,
-    entry.alternate,
-    entry.locker,
-    entry.apartment,
-    entry.business,
-    entry.city,
-    entry.type,
-  ].map(normalize).join(" | ");
-
-  return hay.includes(q);
+function safeStr(v) {
+  return (v === null || v === undefined) ? '' : String(v);
 }
 
-// ---------- rendering ----------
-function render() {
-  const q = normalize(els.search?.value);
-  const groups = rawGroups;
+function cleanCommunityLabel(label) {
+  // Remove trailing " (85755)" type suffixes
+  const s = safeStr(label).trim();
+  return s.replace(/\s*\(\d{5}\)\s*$/,'').trim();
+}
 
-  const filtered = [];
-  let groupCount = 0;
-  let entryCount = 0;
+function normalizeCommunity(label) {
+  const v = cleanCommunityLabel(label);
+  if (!v) return '';
+  // Normalize dash style
+  return v.replace(/\s+-\s+/g, ' — ');
+}
 
-  for (const group of groups) {
-    const hoa = safeText(group.community); // HOA = community
-    const addresses = Array.isArray(group.addresses) ? group.addresses : [];
+function showToast(message, duration = 1800) {
+  const toast = document.getElementById('toast');
+  if (!toast) return;
+  toast.textContent = message;
+  toast.classList.add('show');
+  clearTimeout(showToast._t);
+  showToast._t = setTimeout(() => toast.classList.remove('show'), duration);
+}
 
-    const hits = addresses.filter((entry) => (
-      entryMatchesTab(entry, activeTab) && entryMatchesSearch(entry, group, q)
-    ));
+async function copyToClipboard(text, label = 'Copied') {
+  const v = safeStr(text).trim();
+  if (!v) return;
+  try {
+    await navigator.clipboard.writeText(v);
+    showToast(label);
+  } catch (e) {
+    // Fallback
+    const ta = document.createElement('textarea');
+    ta.value = v;
+    document.body.appendChild(ta);
+    ta.select();
+    document.execCommand('copy');
+    ta.remove();
+    showToast(label);
+  }
+}
 
-    if (hits.length) {
-      filtered.push({ group, hits, hoa });
-      groupCount += 1;
-      entryCount += hits.length;
+function classifyAddress(addr) {
+  const apartment = safeStr(addr.apartment).trim();
+  const type = safeStr(addr.type).trim().toLowerCase(); // optional
+  const business = safeStr(addr.business).trim();
+  if (type === 'business') return 'businesses';
+  if (type === 'apartment') return 'apartments';
+  if (type === 'residential') return 'residential';
+  if (business) return 'businesses';
+  if (apartment) return 'apartments';
+  return 'residential';
+}
+
+function getSearchHaystack(comm, addr) {
+  const parts = [
+    normalizeCommunity(comm.community),
+    safeStr(addr.address),
+    safeStr(addr.address_raw),
+    safeStr(addr.apartment),
+    safeStr(addr.neighborhood),
+    safeStr(addr.city),
+    safeStr(addr.gate),
+    safeStr(addr.alternate),
+    safeStr(addr.locker),
+    safeStr(addr.business),
+    safeStr(addr.notes)
+  ];
+  return parts.join(' ').toLowerCase();
+}
+
+function filterData(data, term, tab) {
+  const t = (term || '').trim().toLowerCase();
+
+  const filtered = data.map(comm => {
+    const addresses = (comm.addresses || []).filter(addr => {
+      const kind = classifyAddress(addr);
+      if (tab !== 'all' && kind !== tab) return false;
+      if (!t) return true;
+      return getSearchHaystack(comm, addr).includes(t);
+    });
+    return { ...comm, addresses };
+  }).filter(comm => comm.addresses.length > 0);
+
+  return filtered;
+}
+
+function buildGroups(flattened, tab) {
+  // Groups:
+  // - Apartments: by apartment name (never ZIP)
+  // - Businesses: by business name (or community as fallback)
+  // - Residential/All: by neighborhood if present, else by community (never ZIP)
+  const groups = new Map();
+
+  for (const comm of flattened) {
+    const commLabel = normalizeCommunity(comm.community);
+
+    for (const addr of comm.addresses) {
+      const kind = classifyAddress(addr);
+
+      // Only build groups for the current tab slice (caller already filtered,
+      // but All can include everything)
+      if (tab !== 'all' && kind !== tab) continue;
+
+      const apt = safeStr(addr.apartment).trim();
+      const neighborhood = normalizeCommunity(addr.neighborhood);
+      const city = safeStr(addr.city).trim();
+      const biz = safeStr(addr.business).trim();
+
+      let groupName = '';
+      let groupMeta = '';
+
+      if (kind === 'apartments') {
+        groupName = normalizeCommunity(apt) || commLabel || 'Apartments';
+        groupMeta = [city, neighborhood].filter(Boolean).join(' • ');
+      } else if (kind === 'businesses') {
+        groupName = normalizeCommunity(biz) || commLabel || 'Businesses';
+        groupMeta = city || '';
+      } else {
+        groupName = neighborhood || commLabel || 'Other';
+        groupMeta = city || '';
+      }
+
+      const key = groupName.toLowerCase().replace(/\s+/g, ' ').trim();
+
+      if (!groups.has(key)) {
+        groups.set(key, { name: groupName, meta: groupMeta, items: [] });
+      } else {
+        const g = groups.get(key);
+        if (!g.meta && groupMeta) g.meta = groupMeta;
+      }
+      groups.get(key).items.push({ ...addr });
     }
   }
 
-  if (els.summary) {
-    const tabLabel =
-      activeTab === "apartments" ? "Apartments" :
-      activeTab === "residential" ? "Residential" :
-      activeTab === "businesses" ? "Businesses" : "All";
+  return Array.from(groups.values()).sort((a, b) => a.name.localeCompare(b.name));
+}
 
-    els.summary.textContent = `${tabLabel}: ${entryCount} entr${entryCount === 1 ? "y" : "ies"} in ${groupCount} HOA${groupCount === 1 ? "" : "s"}`;
-  }
+function renderSummary(groups, tab) {
+  const summary = document.getElementById('summary');
+  const totalGroups = groups.length;
+  const totalAddresses = groups.reduce((sum, g) => sum + g.items.length, 0);
 
-  if (!els.list) return;
-  els.list.innerHTML = "";
+  const label =
+    tab === 'apartments' ? 'Apartments' :
+    tab === 'residential' ? 'Residential' :
+    tab === 'businesses' ? 'Businesses' :
+    'All';
 
-  if (!filtered.length) {
-    const empty = document.createElement("div");
-    empty.className = "empty";
-    empty.textContent = "No matches. Try a different search or tab.";
-    els.list.appendChild(empty);
+  summary.innerHTML = `${label}: <strong>${totalAddresses}</strong> addresses in <strong>${totalGroups}</strong> groups`;
+}
+
+function pillHtml(kind, label, value) {
+  const v = safeStr(value).trim();
+  if (!v) return '';
+  const cls = kind === 'gate' ? 'gate' : kind === 'alt' ? 'alt' : 'locker';
+  const copyLabel =
+    kind === 'gate' ? 'Gate copied' :
+    kind === 'alt' ? 'Alt code copied' :
+    'Locker copied';
+
+  return `
+    <span class="code-pill ${cls}">
+      ${label}: <strong>${v}</strong>
+      <button class="copy-btn" data-copy="${encodeURIComponent(v)}" data-toast="${copyLabel}" aria-label="Copy ${label}" type="button">⧉</button>
+    </span>
+  `;
+}
+
+function mapsUrlFor(item) {
+  const address = safeStr(item.address).trim() || safeStr(item.address_raw).trim();
+  const city = safeStr(item.city).trim();
+  const extra = safeStr(item.business).trim() || safeStr(item.apartment).trim();
+  const query = [address, extra, city].filter(Boolean).join(' ');
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+}
+
+function streetViewUrlFor(addr, city) {
+  // Street View "layer=c" will open Street View when available for the searched location.
+  const q = encodeURIComponent(`${addr}${city ? `, ${city}` : ''}`);
+  return `https://www.google.com/maps?q=${q}&layer=c`;
+}
+
+
+function renderList(groups) {
+  const list = document.getElementById('list');
+  list.innerHTML = '';
+
+  if (!groups.length) {
+    const empty = document.createElement('div');
+    empty.className = 'empty';
+    empty.textContent = 'No matches.';
+    list.appendChild(empty);
     return;
   }
 
-  const frag = document.createDocumentFragment();
+  groups.forEach((g, idx) => {
+    const group = document.createElement('section');
+    group.className = 'group';
 
-  for (const { group, hits, hoa } of filtered) {
-    const section = document.createElement("section");
-    section.className = "community";
+    const header = document.createElement('div');
+    header.className = 'group-header';
+    header.setAttribute('role', 'button');
+    header.setAttribute('tabindex', '0');
 
-    const h2 = document.createElement("h2");
-    h2.textContent = hoa || "(Unnamed HOA)";
-    section.appendChild(h2);
+    // ARIA expand/collapse wiring
+    header.setAttribute('aria-expanded', 'false');
+    header.setAttribute('aria-controls', `group-body-${idx}`);
 
-    if (safeText(group.description)) {
-      const p = document.createElement("p");
-      p.className = "desc";
-      p.textContent = safeText(group.description);
-      section.appendChild(p);
+    const titleWrap = document.createElement('div');
+    titleWrap.className = 'group-title';
+
+    const name = document.createElement('div');
+    name.className = 'name';
+    name.textContent = g.name;
+
+    const meta = document.createElement('div');
+    meta.className = 'meta';
+    meta.textContent = g.meta || '';
+
+    titleWrap.appendChild(name);
+    if (g.meta) titleWrap.appendChild(meta);
+
+    const right = document.createElement('div');
+    right.style.display = 'flex';
+    right.style.alignItems = 'center';
+
+    const badge = document.createElement('span');
+    badge.className = 'badge';
+    badge.textContent = `${g.items.length}`;
+
+    const chev = document.createElement('span');
+    chev.className = 'chev';
+    chev.textContent = '▸'; // collapsed by default
+
+    right.appendChild(badge);
+    right.appendChild(chev);
+
+    header.appendChild(titleWrap);
+    header.appendChild(right);
+
+    const body = document.createElement('div');
+    body.className = 'group-body';
+    body.id = `group-body-${idx}`;
+    body.setAttribute('role', 'region');
+    body.style.display = 'none'; // collapsed by default
+
+    g.items.forEach(item => {
+      const addrDiv = document.createElement('div');
+      addrDiv.className = 'address';
+
+      const addrLine = document.createElement('div');
+      addrLine.className = 'addr-line';
+
+      const addrRow = document.createElement('div');
+      addrRow.className = 'addr-row';
+
+      const addrText = document.createElement('div');
+      addrText.className = 'addr-text';
+      addrText.textContent = `📍 ${safeStr(item.address).trim() || safeStr(item.address_raw).trim()}`;
+
+      const mapsLink = document.createElement('a');
+      mapsLink.className = 'maps-link';
+      mapsLink.href = mapsUrlFor(item);
+      mapsLink.target = '_blank';
+      mapsLink.rel = 'noopener';
+      mapsLink.textContent = 'Maps';
+
+      addrRow.appendChild(addrText);
+      addrRow.appendChild(mapsLink);
+      addrLine.appendChild(addrRow);
+
+      // Secondary line rules:
+      // - NEVER show ZIP
+      // - NEVER show "Central Tucson — Urban Apartments" repeated per row
+      // - Only show if it adds info (not equal to group name)
+      const nb = normalizeCommunity(item.neighborhood);
+      const cityLine = safeStr(item.city).trim();
+      const groupName = normalizeCommunity(g.name);
+
+      const parts = [];
+      if (nb && nb !== groupName) parts.push(nb);
+      // city helps, but avoid clutter: only show if it’s not identical to nb/group
+      if (cityLine && cityLine !== groupName && cityLine !== nb) parts.push(cityLine);
+
+      if (parts.length) {
+        const note = document.createElement('div');
+        note.className = 'small-note';
+        note.textContent = parts.join(' • ');
+        addrLine.appendChild(note);
+      }
+
+      addrDiv.appendChild(addrLine);
+
+      const codes = document.createElement('div');
+      codes.className = 'codes';
+      codes.innerHTML =
+        pillHtml('gate', 'Gate', item.gate) +
+        pillHtml('alt', 'Alt', item.alternate) +
+        pillHtml('locker', 'Locker', item.locker);
+
+      if (codes.innerHTML.trim()) addrDiv.appendChild(codes);
+      body.appendChild(addrDiv);
+    });
+
+    group.appendChild(header);
+    group.appendChild(body);
+
+    function setExpanded(expand) {
+      body.style.display = expand ? '' : 'none';
+      chev.textContent = expand ? '▾' : '▸';
+      header.setAttribute('aria-expanded', expand ? 'true' : 'false');
     }
 
-    for (const entry of hits) {
-      const card = document.createElement("article");
-      card.className = `card type-${normalize(entry.type) || "unknown"}`;
-
-      const addr = document.createElement("div");
-      addr.className = "addr";
-      addr.textContent = safeText(entry.address) || "(No address)";
-      card.appendChild(addr);
-
-      const meta = document.createElement("div");
-      meta.className = "meta";
-
-      const type = safeText(entry.type);
-      if (type) {
-        const pill = document.createElement("span");
-        pill.className = "pill";
-        pill.textContent = type;
-        meta.appendChild(pill);
-      }
-
-      const city = safeText(entry.city);
-      if (city) {
-        const c = document.createElement("span");
-        c.className = "meta-item";
-        c.textContent = city;
-        meta.appendChild(c);
-      }
-
-      card.appendChild(meta);
-
-      const rows = document.createElement("div");
-      rows.className = "rows";
-
-      function addRow(label, value) {
-        const v = safeText(value);
-        if (!v) return;
-        const row = document.createElement("div");
-        row.className = "row";
-        const l = document.createElement("span");
-        l.className = "label";
-        l.textContent = label;
-        const val = document.createElement("span");
-        val.className = "value";
-        val.textContent = v;
-        row.appendChild(l);
-        row.appendChild(val);
-        rows.appendChild(row);
-      }
-
-      addRow("Gate", entry.gate);
-      addRow("Alt", entry.alternate);
-      addRow("Locker", entry.locker);
-      addRow("Apartment", entry.apartment);
-      addRow("Business", entry.business);
-
-      if (rows.childElementCount) card.appendChild(rows);
-
-      const actions = document.createElement("div");
-      actions.className = "actions";
-
-      const maps = document.createElement("a");
-      maps.href = streetViewUrl(entry, group);
-      maps.target = "_blank";
-      maps.rel = "noopener noreferrer";
-      maps.className = "btn";
-      maps.textContent = "Street View";
-      actions.appendChild(maps);
-
-      const gateVal = safeText(entry.gate);
-      if (gateVal) {
-        const copy = document.createElement("button");
-        copy.type = "button";
-        copy.className = "btn secondary";
-        copy.textContent = "Copy Gate";
-        copy.addEventListener("click", async () => {
-          try {
-            await navigator.clipboard.writeText(gateVal);
-            toast(`Copied: ${gateVal}`);
-          } catch {
-            const ta = document.createElement("textarea");
-            ta.value = gateVal;
-            document.body.appendChild(ta);
-            ta.select();
-            document.execCommand("copy");
-            ta.remove();
-            toast(`Copied: ${gateVal}`);
-          }
-        });
-        actions.appendChild(copy);
-      }
-
-      card.appendChild(actions);
-      section.appendChild(card);
+    function toggle() {
+      const isHidden = body.style.display === 'none';
+      setExpanded(isHidden);
     }
 
-    frag.appendChild(section);
-  }
+    header.addEventListener('click', toggle);
+    header.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggle();
+      }
+    });
 
-  els.list.appendChild(frag);
+    list.appendChild(group);
+  });
+
+  // Copy handler (event delegation)
+  list.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', async (e) => {
+      e.stopPropagation();
+      const text = decodeURIComponent(btn.dataset.copy || '');
+      const toast = btn.dataset.toast || 'Copied';
+      if (!text) return;
+      await copyToClipboard(text, toast);
+    });
+  });
 }
 
-// ---------- tabs ----------
 function setActiveTab(tab) {
-  activeTab = tab;
-
-  for (const btn of els.tabs) {
-    const isActive = btn.dataset.tab === tab;
-    btn.classList.toggle("active", isActive);
-    btn.setAttribute("aria-selected", isActive ? "true" : "false");
-  }
-
-  render();
+  document.querySelectorAll('.tab').forEach(b => {
+    const isActive = b.dataset.tab === tab;
+    b.classList.toggle('active', isActive);
+    b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+  });
 }
 
-// ---------- init ----------
-async function init() {
-  for (const btn of els.tabs) {
-    btn.addEventListener("click", () => setActiveTab(btn.dataset.tab));
-  }
+document.addEventListener('DOMContentLoaded', async () => {
+  let data = [];
+  let activeTab = 'apartments'; // default tab
 
-  if (els.search) {
-    els.search.addEventListener("input", () => render());
-  }
+  const searchEl = document.getElementById('search');
+  const listEl = document.getElementById('list');
 
   try {
-    const res = await fetch(DATA_FILE, { cache: "no-cache" });
-    if (!res.ok) throw new Error(`Fetch failed: ${res.status} ${res.statusText}`);
-    const data = await res.json();
-    if (!Array.isArray(data)) throw new Error("JSON root is not an array");
-
-    rawGroups = data;
-    setActiveTab(activeTab);
-  } catch (err) {
-    console.error(err);
-    if (els.summary) els.summary.textContent = "Error loading data.";
-    if (els.list) {
-      els.list.innerHTML = `<div class="empty">Could not load <b>${DATA_FILE}</b>. Check filename/path and JSON format.</div>`;
-    }
+    if (listEl) listEl.innerHTML = '<div class="loading">Loading...</div>';
+    data = await loadData();
+  } catch (e) {
+    console.error(e);
+    return;
   }
-}
 
-init();
+  function refresh() {
+    const filtered = filterData(data, searchEl.value, activeTab);
+    const groups = buildGroups(filtered, activeTab);
+    renderSummary(groups, activeTab);
+    renderList(groups);
+  }
+
+  // Tabs
+  document.querySelectorAll('.tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeTab = btn.dataset.tab;
+      setActiveTab(activeTab);
+      refresh();
+    });
+  });
+
+  // Search (debounced)
+  searchEl.addEventListener('input', debounce(refresh, 200));
+
+  // Initial render
+  setActiveTab(activeTab);
+  refresh();
+
+  // PWA service worker
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./service-worker.js').catch(() => {});
+    });
+  }
+});
