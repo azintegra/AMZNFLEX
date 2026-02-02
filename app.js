@@ -201,6 +201,18 @@ function mapsUrlFor(item) {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
 }
 
+  // Google Maps Street View link (best-effort using address search + Street View layer)
+  function streetViewUrlFor(item) {
+    const parts = [];
+    if (item.address) parts.push(item.address);
+    if (item.city) parts.push(item.city);
+    parts.push('AZ');
+    const query = parts.join(', ');
+    // layer=c attempts to open the Street View layer for the queried location (if available)
+    return `https://www.google.com/maps?q=${encodeURIComponent(query)}&layer=c`;
+  }
+
+
 function renderList(groups) {
   const list = document.getElementById('list');
   list.innerHTML = '';
@@ -287,6 +299,14 @@ function renderList(groups) {
 
       addrRow.appendChild(addrText);
       addrRow.appendChild(mapsLink);
+
+      const streetLink = document.createElement('a');
+      streetLink.className = 'maps-link';
+      streetLink.href = streetViewUrlFor(item);
+      streetLink.target = '_blank';
+      streetLink.rel = 'noopener';
+      streetLink.textContent = 'Street View';
+      addrRow.appendChild(streetLink);
       addrLine.appendChild(addrRow);
 
       // Secondary line rules:
